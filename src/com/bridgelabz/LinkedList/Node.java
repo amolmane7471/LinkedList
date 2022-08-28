@@ -4,14 +4,11 @@ public class Node {
 	int key;
 	Node next;
 	
-	public void setKey(int key) {
+	public Node(int key) {
 		this.key = key;
+		this.next = null;
 	}
-	
-	public int getKey() {
-		return key;
-	}
-	
+
 	public void setNext(Node next) {
 		this.next = next;
 	}
@@ -19,4 +16,5 @@ public class Node {
 	public Node getNext() {
 		return next;
 	}
+
 }
