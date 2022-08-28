@@ -68,13 +68,23 @@ public class Operations {
 		list.popLast(); 
         list.displayLinkedList();
 	}
-	
+	/*
+	 * UC7 : ability to search linked list to find node with value 30
+	 */
+	public static void searchNode() {
+		MyLinkedList list=new MyLinkedList();
+		list.insertFirst(30);
+		list.insertFirst(70);
+		list.insertFirst(56);
+		list.findNode(30);
+		list.displayLinkedList();
+	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num;
 		do{
 		System.out.println("Enter a choice : \n 1.Add data at start \n 2.Add data at end \n 3.Insert In Between "
-				+ "\n 4.Delete first \n 5.delete last \n 6.exit");
+				+ "\n 4.Delete first \n 5.delete last \n 6.search node \n 7.exit");
 		num = sc.nextInt();
 		switch(num) {
 		case 1:
@@ -92,10 +102,13 @@ public class Operations {
 		case 5:
 			deleteLast();
 			break;
+		case 6:
+			searchNode();
+			break;
 		default :
 			System.exit(0);
 			}
-		}while(num != 6);
+		}while(num != 7);
 		sc.close();
 	}
 }

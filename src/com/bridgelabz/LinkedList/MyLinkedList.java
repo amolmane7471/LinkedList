@@ -76,5 +76,17 @@ public class MyLinkedList {
 		return 0;
 	}
 
+	public Node findNode(int data) {
+		Node currentNode = head;
+		while (currentNode != null) {
+			if (currentNode.key == data) {
+				System.out.println("Node with value " + data + " is found");
+				return currentNode;
+			}
+			currentNode = currentNode.next;
+		}
+		System.out.println("No node found with value " + data);
+		return null;
+	}
 
 }
