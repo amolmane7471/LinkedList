@@ -44,7 +44,9 @@ public class Operations {
 		list.insertInBetween(56,30);;
 		list.displayLinkedList();	
 	}
-	
+	/*
+	 * UC5 : ability to delete first element of linked list
+	 */
 	public static void deleteFirst() {
 		MyLinkedList list = new MyLinkedList();
 		list.insertFirst(70);   
@@ -54,12 +56,25 @@ public class Operations {
 		list.pop(); 
         list.displayLinkedList();
 	}
+	/*
+	 * UC6 : Ability to delete last element of linked list
+	 */
+	public static void deleteLast() {
+		MyLinkedList list = new MyLinkedList();
+		list.insertFirst(70);   
+		list.insertFirst(30);   
+		list.insertFirst(56);  
+		list.displayLinkedList(); 
+		list.popLast(); 
+        list.displayLinkedList();
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num;
 		do{
 		System.out.println("Enter a choice : \n 1.Add data at start \n 2.Add data at end \n 3.Insert In Between "
-				+ "\n 4.Delete first \n 5.exit");
+				+ "\n 4.Delete first \n 5.delete last \n 6.exit");
 		num = sc.nextInt();
 		switch(num) {
 		case 1:
@@ -74,10 +89,13 @@ public class Operations {
 		case 4:
 			deleteFirst();
 			break;
+		case 5:
+			deleteLast();
+			break;
 		default :
 			System.exit(0);
 			}
-		}while(num != 5);
+		}while(num != 6);
 		sc.close();
 	}
 }
