@@ -79,12 +79,25 @@ public class Operations {
 		list.findNode(30);
 		list.displayLinkedList();
 	}
+	
+	public static void insertAfter() {
+		MyLinkedList list=new MyLinkedList();
+        list.insertFirst(70);
+        list.displayLinkedList();
+        list.insertFirst(30);
+        list.displayLinkedList();
+        list.insertFirst(56);
+        list.displayLinkedList();
+		list.insertInBetween(30,40);;
+		list.displayLinkedList();	
+
+	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num;
 		do{
 		System.out.println("Enter a choice : \n 1.Add data at start \n 2.Add data at end \n 3.Insert In Between "
-				+ "\n 4.Delete first \n 5.delete last \n 6.search node \n 7.exit");
+				+ "\n 4.Delete first \n 5.delete last \n 6.search node \n 7.Insert After \n 8.exit");
 		num = sc.nextInt();
 		switch(num) {
 		case 1:
@@ -105,10 +118,13 @@ public class Operations {
 		case 6:
 			searchNode();
 			break;
+		case 7:
+			insertAfter();
+			break;
 		default :
 			System.exit(0);
 			}
-		}while(num != 7);
+		}while(num != 8);
 		sc.close();
 	}
 }
