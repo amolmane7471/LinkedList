@@ -3,7 +3,7 @@ package com.bridgelabz.LinkedList;
 public class MyLinkedList {
 		Node head;
 		Node tail;
-
+	
 	public Node insertFirst(int data) {
 		Node newNode = new Node(data);
 		if(head == null) {
@@ -31,6 +31,7 @@ public class MyLinkedList {
 		}
 		}
 		System.out.println("\n");
+
 	}
 	
 	public void append(int data) {
@@ -94,15 +95,18 @@ public class MyLinkedList {
 	public void delete(int data) {
 		Node currentNode = head;
 		Node tail = null;
+		int size = 0;
 		while (currentNode.next != null) {
+			size ++;
 			if (currentNode.key == data) {
 				tail.next = currentNode.next;
-				return ;
 			}
 			tail = currentNode;
 			currentNode = currentNode.next;
 		}
-		System.out.println("No node found with value" + data);
+		System.out.println("after delete linked list size is: "+size);
+		System.out.println("No node found with value " + data);
+		
 	}
-
+	
 }
