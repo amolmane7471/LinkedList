@@ -1,6 +1,6 @@
 package com.bridgelabz.LinkedList;
 /*
- * purpose : we have create simple linked list to manipulate operations on 3 values
+ * purpose : ability to create linkedlist by adding 30 and 56 to 70.
  * @author Amol
  * @since 2022/08/27
  */
