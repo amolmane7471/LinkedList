@@ -61,5 +61,9 @@ public class MyLinkedList {
 		temp.setNext(node);
 	}
 
+	public void pop() {
+		head = head.next;
+	}
+
 
 }
