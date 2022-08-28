@@ -95,7 +95,7 @@ public class Operations {
 
 	}
 	/*
-	 * UC9 : ability to delete in between element
+	 * UC9 : ability to delete in between element and print the how many elements in linked list
 	 */
 	public static void deleteInBetween() {
 		MyLinkedList list=new MyLinkedList();
