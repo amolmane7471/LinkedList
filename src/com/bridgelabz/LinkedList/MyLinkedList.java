@@ -65,5 +65,16 @@ public class MyLinkedList {
 		head = head.next;
 	}
 
+	public int popLast() {
+		Node currentNode = head;
+		Node tail = null;
+		while (currentNode.next != null) {
+			tail = currentNode;
+			currentNode = currentNode.next;
+		}
+		tail.next = currentNode.next;
+		return 0;
+	}
+
 
 }
