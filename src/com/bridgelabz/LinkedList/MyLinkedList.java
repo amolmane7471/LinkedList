@@ -79,9 +79,11 @@ public class MyLinkedList {
 
 	public Node findNode(int data) {
 		Node currentNode = head;
+		int position = 0;
 		while (currentNode != null) {
+			position ++;
 			if (currentNode.key == data) {
-				
+				System.out.println("Node with value " + data + " is found at position "+position);
 				return currentNode;
 			}
 			currentNode = currentNode.next;
