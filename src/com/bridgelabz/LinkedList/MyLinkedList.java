@@ -24,7 +24,7 @@ public class MyLinkedList {
 		}
 		else {
 		Node temp = head;
-		System.out.println("LinkedList is : ");
+		System.out.println("Updated LinkedList is : ");
 		while (temp != null) {
 			System.out.print(temp.key + "->");
 			temp = temp.next;
@@ -87,6 +87,20 @@ public class MyLinkedList {
 		}
 		System.out.println("No node found with value " + data);
 		return null;
+	}
+	
+	public void delete(int data) {
+		Node currentNode = head;
+		Node tail = null;
+		while (currentNode.next != null) {
+			if (currentNode.key == data) {
+				tail.next = currentNode.next;
+				return ;
+			}
+			tail = currentNode;
+			currentNode = currentNode.next;
+		}
+		System.out.println("No node found with value" + data);
 	}
 
 }

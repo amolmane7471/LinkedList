@@ -79,7 +79,9 @@ public class Operations {
 		list.findNode(30);
 		list.displayLinkedList();
 	}
-	
+	/*
+	 * UC8 : ability to insert 40 after 30 to the linked list sequence of 56->30->70
+	 */
 	public static void insertAfter() {
 		MyLinkedList list=new MyLinkedList();
         list.insertFirst(70);
@@ -92,12 +94,28 @@ public class Operations {
 		list.displayLinkedList();	
 
 	}
+	/*
+	 * UC9 : ability to delete in between element
+	 */
+	public static void deleteInBetween() {
+		MyLinkedList list=new MyLinkedList();
+        list.insertFirst(70);
+        list.displayLinkedList();
+        list.insertFirst(30);
+        list.displayLinkedList();
+        list.insertFirst(56);
+        list.displayLinkedList();
+		list.insertInBetween(30,40);;
+		list.displayLinkedList();	
+		list.delete(40);
+		list.displayLinkedList();	
+	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num;
 		do{
 		System.out.println("Enter a choice : \n 1.Add data at start \n 2.Add data at end \n 3.Insert In Between "
-				+ "\n 4.Delete first \n 5.delete last \n 6.search node \n 7.Insert After \n 8.exit");
+				+ "\n 4.Delete first \n 5.delete last \n 6.search node \n 7.Insert After \n 8.delete in between \n 9.exit");
 		num = sc.nextInt();
 		switch(num) {
 		case 1:
@@ -121,10 +139,13 @@ public class Operations {
 		case 7:
 			insertAfter();
 			break;
+		case 8:
+			deleteInBetween();
+			break;
 		default :
 			System.exit(0);
 			}
-		}while(num != 8);
+		}while(num != 9);
 		sc.close();
 	}
 }
