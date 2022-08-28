@@ -18,19 +18,38 @@ public class Operations {
 		list.insertFirst(56);
 	    list.displayLinkedList();
 	}
+	/*
+	 * UC3 :Ability to create linkedlist by appending 30 and 70 to 56
+	 * append method insert new element next to the first element 
+	 */
+	public static void addDataAtEnd() {
 	
+	MyLinkedList list=new MyLinkedList();
+	list.append(56);
+	list.displayLinkedList();
+	list.append(30);
+	list.displayLinkedList();
+	list.append(70);
+	list.displayLinkedList();
+	}
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a choice : \n 1.Add data at start " );
-		int num = sc.nextInt();
-		sc.close();
+		int num;
+		do{
+		System.out.println("Enter a choice : \n 1.Add data at start \n 2.Add data at end \n 3.exit");
+		num = sc.nextInt();
 		switch(num) {
 		case 1:
 			addDataAtStart();
 			break;
+		case 2:
+			addDataAtEnd();
+			break;
 		default :
-			System.out.println("enter valid choice");
-		}
-		}
+			System.exit(0);
+			}
+		}while(num != 3);
+		sc.close();
+	}
 }

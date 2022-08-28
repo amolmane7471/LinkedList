@@ -2,6 +2,7 @@ package com.bridgelabz.LinkedList;
 
 public class MyLinkedList {
 		Node head;
+		Node tail;
 
 	public Node insertFirst(int data) {
 		Node newNode = new Node(data);
@@ -31,5 +32,19 @@ public class MyLinkedList {
 		}
 		System.out.println("\n");
 	}
+	
+	public void append(int data) {
+		Node newNode = new Node(data);
+		if(head == null) {
+		head = newNode;
+		tail = newNode;
+		}
+		else
+		{
+			this.tail.next = newNode;
+			tail = newNode;
+		}
+	}
+
 
 }
