@@ -24,20 +24,32 @@ public class Operations {
 	 */
 	public static void addDataAtEnd() {
 	
-	MyLinkedList list=new MyLinkedList();
-	list.append(56);
-	list.displayLinkedList();
-	list.append(30);
-	list.displayLinkedList();
-	list.append(70);
-	list.displayLinkedList();
+		MyLinkedList list=new MyLinkedList();
+		list.append(56);
+		list.displayLinkedList();
+		list.append(30);
+		list.displayLinkedList();
+		list.append(70);
+		list.displayLinkedList();
 	}
-
+	/*
+	 * UC4 : ability to insert 30 between 56 and 70.
+	 */
+	public static void insertBetween() {
+		MyLinkedList list=new MyLinkedList();
+        list.insertFirst(70);
+        list.displayLinkedList();
+        list.insertFirst(56);
+        list.displayLinkedList();
+		list.insertInBetween(56,30);;
+		list.displayLinkedList();	
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num;
 		do{
-		System.out.println("Enter a choice : \n 1.Add data at start \n 2.Add data at end \n 3.exit");
+		System.out.println("Enter a choice : \n 1.Add data at start \n 2.Add data at end \n 3.Insert In Between \n 4.exit");
 		num = sc.nextInt();
 		switch(num) {
 		case 1:
@@ -45,6 +57,9 @@ public class Operations {
 			break;
 		case 2:
 			addDataAtEnd();
+			break;
+		case 3:
+			insertBetween();
 			break;
 		default :
 			System.exit(0);

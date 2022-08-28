@@ -46,5 +46,20 @@ public class MyLinkedList {
 		}
 	}
 
+	public void insertInBetween(int previous, int newNode) {
+		Node currentNode = head;
+		Node temp = null;
+		while (currentNode != null) {
+			if (currentNode.key == previous) {
+				temp = currentNode;
+			}
+			currentNode = currentNode.next;
+		}
+		Node node = new Node(newNode);
+		node.setKey(newNode);
+		node.next = temp.next;
+		temp.setNext(node);
+	}
+
 
 }

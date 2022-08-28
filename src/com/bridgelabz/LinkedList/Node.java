@@ -17,4 +17,8 @@ public class Node {
 		return next;
 	}
 
+	public void setKey(int key) {
+	  this.key = key;
+	}
+
 }
